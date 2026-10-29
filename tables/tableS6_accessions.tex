@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Provenance of the 14 panel datasets.} Each dataset was obtained from CZ CELLxGENE Discover~\cite{cellxgene2025} as a single \texttt{.h5ad} file, retrievable at \url{https://datasets.cellxgene.cziscience.com/}\texttt{<dataset ID>}\texttt{.h5ad}. Source cells is the number of cells in the downloaded file; analysed cells is the number retained after restriction to the dominant assay, quality filtering, the per-cell-type cap and proportional downsampling (Methods). Dataset identifiers are also listed in \texttt{config/panel\_def.json} in the code repository.}
+\label{tab:s6}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrll@{}}
+\toprule
+Dataset & Assay & Source cells & Analysed cells & CELLxGENE dataset ID & Study \\
+\midrule
+Bone marrow & 10x 3$'$ v3 & 27,112 & 3,003 & \texttt{4aedb645-7487-4ab0-ad95-ee4db1b8eccd} & \cite{tabula} \\
+Kidney & 10x 3$'$ v3 & 11,376 & 1,315 & \texttt{76b6cf23-56db-4eac-8ee8-d84ce64c0395} & \cite{tabula} \\
+Large intestine & 10x 3$'$ v3 & 30,084 & 3,005 & \texttt{81781bd2-7a71-43a8-ab31-2a9009c1aea6} & \cite{tabula} \\
+Liver & 10x 3$'$ v3 & 22,214 & 2,995 & \texttt{a4b3a49e-062b-4e3f-8915-02f40607651f} & \cite{tabula} \\
+Lung & 10x 3$'$ v3 & 65,847 & 3,002 & \texttt{fddf43a3-b7c8-49e9-ac0a-5e24b390849f} & \cite{tabula} \\
+Pancreas & 10x 3$'$ v3 & 14,140 & 1,887 & \texttt{ba587dee-e050-4a31-bcb8-05e5418f9086} & \cite{tabula} \\
+Skin & 10x 3$'$ v3 & 17,786 & 2,301 & \texttt{c240d5bc-a521-4330-a76b-7d566e939d87} & \cite{tabula} \\
+Small intestine & 10x 3$'$ v3 & 42,036 & 2,995 & \texttt{6db4dfe6-d421-4287-a9dc-22eaa59be966} & \cite{tabula} \\
+Spleen & 10x 3$'$ v3 & 70,448 & 2,997 & \texttt{5498457f-6a18-4766-b9a3-a2c8c4662703} & \cite{tabula} \\
+Stomach & 10x 3$'$ v3 & 33,064 & 2,995 & \texttt{3e8bd2b2-fe53-4b95-abb2-ce971b4f1c14} & \cite{tabula} \\
+\midrule
+Colon (UC cohort) & 10x 3$'$ v1 & 34,772 & 1,782 & \texttt{774d77e7-210d-4237-8ca8-8d2bb841a2e4} & \cite{smillie2019} \\
+Skin (psoriasis) & 10x 3$'$ v3 & 24,126 & 2,992 & \texttt{75eae05f-4f07-4518-a434-ea0a0d7ac616} & \cite{gao2021pso} \\
+Colon (Crohn's, epithelial) & 10x 3$'$ v2 & 97,788 & 2,249 & \texttt{333491b4-ca9b-4369-8706-38f7bb5bcd46} & \cite{kong2023} \\
+Colon (Crohn's, immune) & 10x 3$'$ v2 & 152,509 & 3,010 & \texttt{1ddca82d-2948-4dbe-8bba-be9de7115bb7} & \cite{kong2023} \\
+\bottomrule
+\end{tabular}
+\end{table}

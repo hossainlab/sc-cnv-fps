@@ -23,3 +23,20 @@ __pycache__/
 venv/
 .Rhistory
 .RData
+
+# Supplement build product (regenerate with: make supplement)
+scCNV-FP-Evaluation_supplement.zip
+
+# LaTeX build intermediates (make preprints removes them; ignore if a build is interrupted)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+
+# Internal records, not for the public repository
+CLAUDE.md
+docs/archive/
+docs/peer_review_report.md
+docs/scientific_review_*.md
+journal/

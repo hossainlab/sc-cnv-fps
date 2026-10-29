@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Tumour-free panel and false malignant-call rates.} Every call is a false positive by construction. infercnvpy columns give the percentage of cells called malignant by infercnvpy under the two-criterion (Tirosh) rule and the forced two-group split, using the immune reference where one was available ($^{\dagger}$reference-free mode: no immune cells in the Crohn's epithelial dataset). CopyKAT was run on a cell-type-proportional subsample ($n$ shown); the aneuploid percentage uses all submitted cells as the denominator, with \texttt{not.defined} cells counted as not aneuploid. Pooled rates are weighted by dataset size. The pooled donor count is a sum over datasets; Tabula Sapiens donors contribute to several organs and the two Crohn's datasets come from one cohort, so it overstates the number of unique donors. Rates for all rules and both reference modes are in Supplementary Table~S1.}
+\label{tab:panel}
+\scriptsize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}llrrrrrrrrr@{}}
+\toprule
+ & & & & & \multicolumn{2}{c}{infercnvpy (\%)} & \multicolumn{3}{c}{CopyKAT} & ikarus \\
+\cmidrule(lr){6-7}\cmidrule(lr){8-10}\cmidrule(lr){11-11}
+Dataset & Assay & Cells & Donors & Types & Tirosh & Two-group & Aneu.\ (\%) & n.d.\ (\%) & $n$ & Tumour (\%) \\
+\midrule
+Bone marrow & 10x 3$'$ v3 & 3,003 & 5 & 18 & 1.5 & 23.5 & 13.3 & 1.0 & 1,206 & 62.5 \\
+Kidney & 10x 3$'$ v3 & 1,315 & 1 & 8 & 13.6 & 15.0 & 42.4 & 0.0 & 1,198 & 0.0 \\
+Large intestine & 10x 3$'$ v3 & 3,005 & 5 & 24 & 12.0 & 47.0 & 63.0 & 0.2 & 1,196 & 18.9 \\
+Liver & 10x 3$'$ v3 & 2,995 & 4 & 20 & 8.2 & 4.3 & 10.3 & 3.5 & 1,186 & 91.8 \\
+Lung & 10x 3$'$ v3 & 3,002 & 4 & 28 & 9.2 & 56.2 & 26.8 & 0.8 & 1,192 & 6.3 \\
+Pancreas & 10x 3$'$ v3 & 1,887 & 3 & 13 & 19.3 & 19.6 & 49.8 & 0.7 & 1,204 & 27.1 \\
+Skin & 10x 3$'$ v3 & 2,301 & 4 & 14 & 4.1 & 8.7 & 50.3 & 1.5 & 1,198 & 3.1 \\
+Small intestine & 10x 3$'$ v3 & 2,995 & 5 & 29 & 11.9 & 37.2 & 63.0 & 0.2 & 1,192 & 0.0 \\
+Spleen & 10x 3$'$ v3 & 2,997 & 6 & 21 & 5.1 & 22.5 & 3.0 & 3.6 & 1,210 & 2.2 \\
+Stomach & 10x 3$'$ v3 & 2,995 & 3 & 18 & 4.2 & 6.5 & 17.4 & 2.7 & 1,200 & 7.2 \\
+\midrule
+Colon (UC cohort) & 10x 3$'$ v1 & 1,782 & 10 & 13 & 17.6 & 50.0 & 22.9 & 56.4 & 1,196 & 68.9 \\
+Skin (psoriasis) & 10x 3$'$ v3 & 2,992 & 6 & 20 & 2.2 & 10.8 & 32.8 & 8.0 & 1,194 & 46.8 \\
+Colon (Crohn's, epithelial) & 10x 3$'$ v2 & 2,249 & 10 & 7 & 3.6$^{\dagger}$ & 51.1$^{\dagger}$ & 22.7 & 43.0 & 591 & 100.0 \\
+Colon (Crohn's, immune) & 10x 3$'$ v2 & 3,010 & 10 & 17 & 0.5 & 32.8 & 6.8 & 80.6 & 1,126 & 1.5 \\
+\midrule
+\textbf{Pooled} &  & 36,528 & 76 &  & 7.3 & 27.5 & 30.7 & 13.1 & 16,089 & 30.6 \\
+\bottomrule
+\end{tabular}
+\end{table}

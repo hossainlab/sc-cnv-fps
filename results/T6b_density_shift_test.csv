@@ -1,0 +1,2 @@
+test,n_bins,spearman_rho,p_asymptotic,n_shifts,p_circular_shift_onesided,shift_null_rho_mean,shift_null_rho_sd,shift_null_rho_q2.5,shift_null_rho_q97.5,z_vs_shift_null,seed
+gene_density_vs_apparent_shift,278,-0.5288,1.9832670806521117e-21,10000,9.999000099990002e-05,-0.2065,0.0579,-0.3212,-0.0937,5.56,0

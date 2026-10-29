@@ -1,0 +1,43 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Realized per-cell false-call rate (\%) of the calibrated rule across nominal levels.} Leave-one-tissue-out null conditioned on cell type or on label-free archetype. The last row of each block counts datasets, excluding psoriatic skin, with at least one false call. Under Benjamini--Hochberg control at level $\alpha$ with valid $p$-values, the expected count is at most $13\alpha$ if each dataset is one BH family, or $\sum_i \min(1, \alpha d_i) = 0.70, 1.40, 3.50, 7.00$ at the four levels if each of the $d_i$ donors of dataset $i$ is a family.}
+\label{tab:s4}
+\scriptsize
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Conditioning & Dataset & $\alpha=1\%$ & $\alpha=2\%$ & $\alpha=5\%$ & $\alpha=10\%$ \\
+\midrule
+Cell type & Bone marrow & 0.00 & 0.00 & 0.03 & 0.03 \\
+ & Kidney & 0.08 & 0.08 & 0.08 & 0.08 \\
+ & Large intestine & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Liver & 0.00 & 0.00 & 0.00 & 1.67 \\
+ & Lung & 0.30 & 0.30 & 0.43 & 0.47 \\
+ & Pancreas & 0.11 & 0.11 & 0.16 & 0.16 \\
+ & Skin & 0.00 & 0.00 & 0.04 & 0.04 \\
+ & Small intestine & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Spleen & 0.10 & 0.13 & 0.23 & 0.53 \\
+ & Stomach & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Colon (UC cohort) & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Skin (psoriasis) & 2.84 & 11.20 & 26.77 & 44.82 \\
+ & Colon (Crohn's, epithelial) & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Colon (Crohn's, immune) & 0.00 & 0.00 & 0.07 & 0.07 \\
+ & \textit{Datasets with $\geq$1 call (of 13)} & \textit{4} & \textit{4} & \textit{7} & \textit{8} \\
+\midrule
+Archetype & Bone marrow & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Kidney & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Large intestine & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Liver & 0.00 & 0.00 & 0.00 & 4.24 \\
+ & Lung & 0.00 & 0.00 & 0.03 & 0.03 \\
+ & Pancreas & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Skin & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Small intestine & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Spleen & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Stomach & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Colon (UC cohort) & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Skin (psoriasis) & 0.00 & 0.00 & 56.99 & 70.82 \\
+ & Colon (Crohn's, epithelial) & 0.00 & 0.00 & 0.00 & 0.00 \\
+ & Colon (Crohn's, immune) & 0.00 & 0.00 & 0.00 & 18.21 \\
+ & \textit{Datasets with $\geq$1 call (of 13)} & \textit{0} & \textit{0} & \textit{1} & \textit{3} \\
+\bottomrule
+\end{tabular}
+\end{table}

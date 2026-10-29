@@ -1,0 +1,245 @@
+{
+ "pooled_tirosh_fig": 7.3,
+ "pooled_twogroup_fig": 27.5,
+ "copykat_pooled": 30.7,
+ "copykat_pooled_defined": 35.3,
+ "copykat_n_total": 16089,
+ "ikarus_pooled": 30.6,
+ "n_cells": 36528,
+ "n_donors": 76,
+ "tirosh_range_fig": [
+  0.5,
+  19.3
+ ],
+ "twogroup_range_fig": [
+  4.3,
+  56.2
+ ],
+ "twogroup_range_reffree": [
+  4.5,
+  78.0
+ ],
+ "copykat_range": [
+  3.0,
+  63.0
+ ],
+ "copykat_n_over20": 9,
+ "ikarus_n_over50": 4,
+ "pooled_rules_reffree": {
+  "R1_twogroup": 36.0,
+  "R1b_topcluster": 7.5,
+  "R4_tirosh": 6.1
+ },
+ "pooled_rules_refimm": {
+  "R1_twogroup": 25.9,
+  "R1b_topcluster": 8.4,
+  "R3_refSD": 5.7,
+  "R4_tirosh": 7.6
+ },
+ "auc_mean_reffree": {
+  "1": 0.531,
+  "2": 0.546,
+  "3": 0.557,
+  "5": 0.651,
+  "8": 0.757,
+  "12": 0.792,
+  "18": 0.849
+ },
+ "auc_mean_refimm": {
+  "1": 0.533,
+  "2": 0.547,
+  "3": 0.559,
+  "5": 0.63,
+  "8": 0.739,
+  "12": 0.761,
+  "18": 0.828
+ },
+ "n_spike_aneuploid": 2520,
+ "n_spike_diploid": 6474,
+ "matched_score_better": [
+  11,
+  11
+ ],
+ "density_rho": -0.53,
+ "density_p": 2e-21,
+ "density_nbins": 278,
+ "cross_rho_median": 0.54,
+ "cross_rho_npairs": 91,
+ "cross_rho_median_excl_cdimm": 0.56,
+ "cross_rho_per_dataset": {
+  "CD_epithelial": 0.53,
+  "CD_immune": -0.41,
+  "PSO_skin": 0.6,
+  "TS_Bone_Marrow": 0.56,
+  "TS_Kidney": 0.62,
+  "TS_Large_Intestine": 0.61,
+  "TS_Liver": 0.48,
+  "TS_Lung": 0.66,
+  "TS_Pancreas": 0.66,
+  "TS_Skin": 0.33,
+  "TS_Small_Intestine": 0.66,
+  "TS_Spleen": 0.61,
+  "TS_Stomach": 0.57,
+  "UC_colon": 0.24
+ },
+ "cdimm_rho_range": [
+  -0.49,
+  -0.11
+ ],
+ "cal_alpha05_median_13": 0.03,
+ "cal_alpha05_max_13": 0.43,
+ "cal_alpha05_pso": 26.8,
+ "cal_any_call_labels": {
+  "0.01": 4,
+  "0.02": 4,
+  "0.05": 7,
+  "0.1": 8
+ },
+ "cal_any_call_archetype": {
+  "0.01": 0,
+  "0.02": 0,
+  "0.05": 1,
+  "0.1": 3
+ },
+ "cal_nfp_alpha05": {
+  "CD_epithelial": 0,
+  "CD_immune": 2,
+  "PSO_skin": 801,
+  "TS_Bone_Marrow": 1,
+  "TS_Kidney": 1,
+  "TS_Large_Intestine": 0,
+  "TS_Liver": 0,
+  "TS_Lung": 13,
+  "TS_Pancreas": 3,
+  "TS_Skin": 1,
+  "TS_Small_Intestine": 0,
+  "TS_Spleen": 7,
+  "TS_Stomach": 0,
+  "UC_colon": 0
+ },
+ "cal_any_call_excess": {
+  "labels_0.01": {
+   "observed": 4,
+   "bound_mean_per_dataset": 0.13,
+   "p_per_dataset": 6.7e-06,
+   "bound_mean_per_donor": 0.7,
+   "p_per_donor": 0.0037
+  },
+  "labels_0.02": {
+   "observed": 4,
+   "bound_mean_per_dataset": 0.26,
+   "p_per_dataset": 9.9e-05,
+   "bound_mean_per_donor": 1.4,
+   "p_per_donor": 0.04
+  },
+  "labels_0.05": {
+   "observed": 7,
+   "bound_mean_per_dataset": 0.65,
+   "p_per_dataset": 1e-06,
+   "bound_mean_per_donor": 3.5,
+   "p_per_donor": 0.028
+  },
+  "labels_0.1": {
+   "observed": 8,
+   "bound_mean_per_dataset": 1.3,
+   "p_per_dataset": 8.1e-06,
+   "bound_mean_per_donor": 7.0,
+   "p_per_donor": 0.36
+  },
+  "archetype_0.01": {
+   "observed": 0,
+   "bound_mean_per_dataset": 0.13,
+   "p_per_dataset": 1.0,
+   "bound_mean_per_donor": 0.7,
+   "p_per_donor": 1.0
+  },
+  "archetype_0.02": {
+   "observed": 0,
+   "bound_mean_per_dataset": 0.26,
+   "p_per_dataset": 1.0,
+   "bound_mean_per_donor": 1.4,
+   "p_per_donor": 1.0
+  },
+  "archetype_0.05": {
+   "observed": 1,
+   "bound_mean_per_dataset": 0.65,
+   "p_per_dataset": 0.49,
+   "bound_mean_per_donor": 3.5,
+   "p_per_donor": 0.99
+  },
+  "archetype_0.1": {
+   "observed": 3,
+   "bound_mean_per_dataset": 1.3,
+   "p_per_dataset": 0.13,
+   "bound_mean_per_donor": 7.0,
+   "p_per_donor": 1.0
+  }
+ },
+ "cal_exceed_nominal_labels": [
+  "PSO_skin"
+ ],
+ "cal_exceed_nominal_archetype": [
+  "CD_immune",
+  "PSO_skin"
+ ],
+ "donor_pso": [
+  27.1,
+  0.03
+ ],
+ "donor_matched_max": 3.67,
+ "donor_n_datasets": 13,
+ "t5c_vs_t10_crosstissue_alpha05": {
+  "CD_epithelial": [
+   0.0,
+   0.0
+  ],
+  "CD_immune": [
+   0.07,
+   0.07
+  ],
+  "PSO_skin": [
+   26.77,
+   27.14
+  ],
+  "TS_Bone_Marrow": [
+   0.03,
+   0.03
+  ],
+  "TS_Large_Intestine": [
+   0.0,
+   3.83
+  ],
+  "TS_Liver": [
+   0.0,
+   4.31
+  ],
+  "TS_Lung": [
+   0.43,
+   1.0
+  ],
+  "TS_Pancreas": [
+   0.16,
+   0.16
+  ],
+  "TS_Skin": [
+   0.04,
+   0.04
+  ],
+  "TS_Small_Intestine": [
+   0.0,
+   0.0
+  ],
+  "TS_Spleen": [
+   0.23,
+   0.63
+  ],
+  "TS_Stomach": [
+   0.0,
+   0.0
+  ],
+  "UC_colon": [
+   0.0,
+   0.0
+  ]
+ }
+}

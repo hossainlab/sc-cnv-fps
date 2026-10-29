@@ -63,8 +63,13 @@ ax.plot(xx, ic + sl * xx, color=C_ACC, lw=1.3)
 ax.axhline(0, color=META_GREY, lw=.6)
 ax.set_xlabel("genes per 10-Mb bin")
 ax.set_ylabel("apparent copy-number shift")
+_ST = pd.read_csv("results/T6b_density_shift_test.csv").iloc[0]
+_pshift = float(_ST["p_circular_shift_onesided"])
+_nshift = int(_ST["n_shifts"])
+_plab = (f"$P$ < $10^{{{int(round(np.log10(1.0 / _nshift)))}}}$"
+         if _pshift <= 1.0 / _nshift else f"$P$ = {_pshift:.1e}")
 ax.annotate(f"Spearman $\\rho$ = {stats.spearmanr(M.n_genes, M['mean_diff'])[0]:.2f}\n"
-            f"$P$ = {stats.spearmanr(M.n_genes, M['mean_diff'])[1]:.1e}",
+            f"{_plab}, circular-shift null",
             (0.97, 0.95), xycoords="axes fraction", ha="right", va="top", fontsize=6.5)
 panel_letter(ax, "b", dx=-0.30)
 

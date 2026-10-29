@@ -39,7 +39,7 @@ x = np.arange(len(order))
 grp = {d: ("inflamed" if d.startswith(("UC_", "PSO_", "CD_")) else "healthy") for d in order}
 cols = [C_INFLAMED if grp[d] == "inflamed" else C_HEALTHY for d in order]
 ax.vlines(x, 0, [t[d] for d in order], color=cols, lw=1.0, alpha=.55)
-ax.scatter(x, [t[d] for d in order], s=26, c=cols, zorder=3, label="inferCNV (copy-number method)")
+ax.scatter(x, [t[d] for d in order], s=26, c=cols, zorder=3, label="infercnvpy (copy-number method)")
 ck = T2b.set_index("dataset")["aneuploid_pct"]
 ax.scatter(x, [k[d] for d in order], s=26, facecolors="none", edgecolors=C_ACC, lw=1.1,
            zorder=3, label="ikarus (trained classifier)")

@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Detection at matched false-call rate, per spike-in tissue.} For each rule, its false-call rate on diploid companion cells and its detection rate on cells carrying 12--18 arm events, compared with a threshold on the continuous infercnvpy score placed at exactly that false-call rate. The threshold is a quantile of the score among the same diploid companions used to measure the rule's false-call rate, so the ratios are an upper bound attainable only where such a reference exists. n.e.: not estimable; the rule made no false calls on spleen diploid cells, so no score threshold at 0\% false calls was evaluated.}
+\label{tab:matched}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+ & & False-call & \multicolumn{2}{c}{Detection, 12--18 events (\%)} & \\
+\cmidrule(lr){4-5}
+Rule & Tissue & rate (\%) & Rule & Score & Ratio \\
+\midrule
+Two-criterion (Tirosh) & Liver & 6.5 & 4.6 & 17.9 & 3.9$\times$ \\
+Two-criterion (Tirosh) & Lung & 5.3 & 6.2 & 33.3 & 5.3$\times$ \\
+Two-criterion (Tirosh) & Spleen & 4.5 & 4.6 & 20.4 & 4.5$\times$ \\
+\addlinespace
+Highest-scoring cluster & Liver & 5.8 & 4.2 & 15.4 & 3.7$\times$ \\
+Highest-scoring cluster & Lung & 1.2 & 2.5 & 5.4 & 2.2$\times$ \\
+Highest-scoring cluster & Spleen & 0.0 & 31.2 & n.e. & -- \\
+\addlinespace
+Forced two-group split & Liver & 5.0 & 4.6 & 12.9 & 2.8$\times$ \\
+Forced two-group split & Lung & 56.4 & 38.8 & 94.2 & 2.4$\times$ \\
+Forced two-group split & Spleen & 22.2 & 21.2 & 87.9 & 4.1$\times$ \\
+\addlinespace
+ikarus & Liver & 83.2 & 80.0 & 97.9 & 1.2$\times$ \\
+ikarus & Lung & 6.3 & 3.3 & 34.2 & 10.3$\times$ \\
+ikarus & Spleen & 3.1 & 2.9 & 14.2 & 4.9$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
