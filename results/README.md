@@ -42,7 +42,17 @@ The calibration quantities the manuscript reports are those in `T5c` (LOTO) and 
 published.
 
 The known disagreement between `T5c` and the cross-tissue arm of `T10` affects three
-datasets whose two arms score an identical set of cells (large intestine, liver, lung); it
+datasets whose two arms score the same number of cells (large intestine, liver, lung); it
 is disclosed in the manuscript itself, and both are reported as computed. For 7 of the 13
 datasets the two analyses do not score the same cells at all, because `T10` is restricted
 to donors contributing at least 200 cells.
+
+## `headline_numbers.json` is stale; do not quote it
+
+No script writes this file, and it predates the final tables. Its `matched` block disagrees
+with `T4_matched_fpr.csv` (for example, two-criterion false-call rates [5.4, 5.8, 5.1] against
+[6.45, 5.32, 4.45] in `T4`), and its `twogroup_range` [4.5, 78.0] is the reference-free range,
+not the immune-reference range of 4.3–56.2 quoted in the manuscript. Every manuscript number
+comes from the `T*.csv` tables and `derived_numbers.json`, which `scripts/make_tables.py`
+regenerates byte-identically (checked 2026-11-01).
+

@@ -40,3 +40,6 @@ docs/archive/
 docs/peer_review_report.md
 docs/scientific_review_*.md
 journal/
+
+# Research audit trail (reference verification), local only
+sources/

@@ -2,13 +2,13 @@
 
 Prepared to accompany `preprint/scCNV-FP-Evaluation.pdf`. Everything below is either ready
 to paste into the submission form or flagged as needing your input. Last reconciled against
-the manuscript on 2026-10-27.
+the manuscript on 2026-11-01.
 
 ## Files to upload
 
 | Form field | File | Note |
 |---|---|---|
-| Manuscript | `preprint/scCNV-FP-Evaluation.pdf` | Single PDF: text, 4 figures, 3 tables and Supplementary Tables S1–S6; 23 pages. Well within the 40 MB limit. |
+| Manuscript | `preprint/scCNV-FP-Evaluation.pdf` | Single PDF: text, 4 figures, 3 tables and Supplementary Tables S1–S6; 24 pages. Well within the 40 MB limit. |
 | Supplemental material | `scCNV-FP-Evaluation_supplement.zip` | Result tables, analysis and figure scripts, figure files, LaTeX source. Built by `make supplement`. |
 
 Line numbers are enabled in the current source to aid review (`\linenumbers`, flagged with a
@@ -31,7 +31,7 @@ containing no tumour. We assembled 14 tumour-free scRNA-seq datasets (36,528 cel
 donor–dataset combinations; 10 healthy organs and 4 inflammatory-disease datasets) and ran
 inferCNV (as infercnvpy), CopyKAT and ikarus under published decision rules; every positive
 call is false by construction. infercnvpy and CopyKAT made false calls in every dataset and
-ikarus in 12 of 14: 0.5–19.3% for the two-criterion rule of Tirosh and colleagues, 4.3–56.2%
+ikarus in 12 of 14: 0.5–19.3% for a two-criterion rule adapted from Tirosh and colleagues, 4.3–56.2%
 for a forced two-group split with an immune reference and up to 78.0% without one, 3.0–63.0%
 for CopyKAT and 0–100% for ikarus, with CopyKAT and ikarus each calling about 31% of cells
 pooled. In-silico positive controls showed per-cell discrimination near chance for single arm

@@ -1,11 +1,11 @@
 # Submission bundle — contents and how it was built
 
 ## Manuscript
-- `preprint/scCNV-FP-Evaluation.pdf` — typeset preprint, 23 pages (bioRxiv upload file);
+- `preprint/scCNV-FP-Evaluation.pdf` — typeset preprint, 24 pages (bioRxiv upload file);
   built by `make preprint`
 - `preprint/scCNV-FP-Evaluation.tex` — LaTeX source; figures resolve to `figures/Fig*.pdf`
   and generated tables to `tables/*.tex`
-- `preprint/scCNV-FP-Evaluation.bib` — bibliography (31 references), typeset with BibTeX
+- `preprint/scCNV-FP-Evaluation.bib` — bibliography (45 references), typeset with BibTeX
   (`unsrtnat`, numbered in citation order)
 - `docs/archive/` — dated pre-review copies of the source
 

@@ -64,6 +64,9 @@ def _thin_row(vals, p, rng):
     hi = p > 1.0
     if hi.any():
         extra_p = np.clip(p[hi] - 1.0, 0.0, 1.0)
+        # KNOWN DEFECT (kept so published results reproduce): for p = 2.0 (CN 4) this
+        # gives whole = 1 plus binomial(v, 1.0) = v, i.e. 3x rather than 2x dosage.
+        # Correct form: whole = floor(p - 1); extra_p = (p - 1) - whole. Disclosed in Methods.
         whole = np.floor(p[hi] - 1.0).astype(np.int64)
         out[hi] = vals[hi] + whole * vals[hi] + rng.binomial(vals[hi], extra_p)
     return out

@@ -88,7 +88,7 @@ def build_panel(path, out, name, assay_keep=None, per_type=300, cap=6000,
     if "n_genes_by_counts" in obs: keep &= pd.to_numeric(obs["n_genes_by_counts"], errors="coerce").fillna(0) >= min_genes
     if "pct_counts_mt" in obs:     keep &= pd.to_numeric(obs["pct_counts_mt"], errors="coerce").fillna(0) <= max_pct_mt
     obs_f = obs[keep]
-    # stratified subsample: cell_type x donor x disease
+    # stratified subsample: cell_type x disease (not by donor)
     rng = np.random.default_rng(seed)
     strat = ["cell_type"]
     if disease_col in obs_f: strat.append(disease_col)
