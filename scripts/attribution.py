@@ -1,7 +1,7 @@
 """Attribute false malignant calls to cell types and to genomic loci.
 
 Two questions:
-  (1) which cell types are called malignant in tumour-free tissue, relative to their
+  (1) which cell types are called malignant in tumor-free tissue, relative to their
       abundance in the panel;
   (2) where in the genome the spurious CNV signal sits, and whether it concentrates at
       clustered loci of co-regulated gene families (immunoglobulin, HLA, histone,

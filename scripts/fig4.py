@@ -74,7 +74,7 @@ ax.set_ylabel("wrongly called cells (%)")
 ax.legend(frameon=False, loc="upper right", handlelength=1.0, labelspacing=.6)
 panel_letter(ax, "d")
 
-# ---- (b) how often a tumour-free dataset receives any call at all
+# ---- (b) how often a tumor-free dataset receives any call at all
 ax = axes[3]
 for src, cc, lab_, mk in [("labels", C_CAL, "cell type", "o"), ("archetype", C_ARCH, "archetype", "s")]:
     T = SW[(SW.source == src) & (SW.dataset != "PSO_skin")]

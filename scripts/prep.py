@@ -87,6 +87,13 @@ def build_panel(path, out, name, assay_keep=None, per_type=300, cap=6000,
     if "total_counts" in obs:      keep &= pd.to_numeric(obs["total_counts"], errors="coerce").fillna(0) >= min_counts
     if "n_genes_by_counts" in obs: keep &= pd.to_numeric(obs["n_genes_by_counts"], errors="coerce").fillna(0) >= min_genes
     if "pct_counts_mt" in obs:     keep &= pd.to_numeric(obs["pct_counts_mt"], errors="coerce").fillna(0) <= max_pct_mt
+    # QC uses the per-cell metrics shipped in the CELLxGENE obs; a metric that is absent
+    # leaves its filter unapplied (behavior of the published run). Record which ones.
+    missing_qc = [c for c in ("total_counts", "n_genes_by_counts", "pct_counts_mt") if c not in obs]
+    if missing_qc:
+        import sys
+        print(f"[prep] {name}: QC metric(s) {missing_qc} absent from obs; "
+              "corresponding filter(s) not applied", file=sys.stderr, flush=True)
     obs_f = obs[keep]
     # stratified subsample: cell_type x disease (not by donor)
     rng = np.random.default_rng(seed)

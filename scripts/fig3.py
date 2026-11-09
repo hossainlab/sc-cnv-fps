@@ -15,7 +15,7 @@ fig = plt.figure(figsize=(7.2, 4.9))
 gs = fig.add_gridspec(2, 2, height_ratios=[1, 1], width_ratios=[1.45, 1],
                       hspace=0.52, wspace=0.4)
 
-# ---- (a) genome-wide mean difference profile, recurrent loci labelled
+# ---- (a) genome-wide mean difference profile, recurrent loci labeled
 ax = fig.add_subplot(gs[0, :])
 prof = BP.groupby(["chrom", "bin"], as_index=False).agg(diff=("diff", "mean"),
                                                         start=("start", "mean"))
@@ -34,7 +34,7 @@ ax.bar(prof.x, prof["diff"], width=1.0,
 ax.axhline(0, color="black", lw=.6)
 ax.set_xticks(prof.groupby("chrom", sort=False).x.mean().values)
 tl = ax.set_xticklabels(CHR, fontsize=5.5)
-# chr19-22 are short enough that their centred labels touch; drop every other
+# chr19-22 are short enough that their centered labels touch; drop every other
 # one of the crowded tail onto a second row so each stays separately readable
 for c, t in zip(CHR, tl):
     if c in ("19", "21"):

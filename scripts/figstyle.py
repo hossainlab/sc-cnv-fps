@@ -3,7 +3,7 @@
 The original figures were rendered in an environment that injected these helpers
 into the script namespace; they were not part of the supplement. This module is a
 reconstruction matched by eye to the published PNG/PDF files (Matplotlib 3.11.1,
-DejaVu Sans). Data, layout and colours come from the figure scripts themselves, so
+DejaVu Sans). Data, layout and colors come from the figure scripts themselves, so
 regenerated figures carry identical content; spacing and font sizes may differ
 slightly from the published versions.
 """

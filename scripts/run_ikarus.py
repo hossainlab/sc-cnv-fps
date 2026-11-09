@@ -1,4 +1,4 @@
-"""Run ikarus (supervised tumour/normal gene-signature classifier) on the panel.
+"""Run ikarus (supervised tumor/normal gene-signature classifier) on the panel.
 
 ikarus takes no normal reference and emits a hard Tumor/Normal label per cell, so
 there is a single mode and no user-chosen threshold. Its published signature set
@@ -70,6 +70,6 @@ if __name__ == "__main__":
             print(nm, "SKIP", flush=True); continue
         try:
             m = run_one(p)
-            print(f"{nm} OK cells={m['n_cells']} tumour={m['fpr_tumor']:.3f} {m['runtime_s']}s", flush=True)
+            print(f"{nm} OK cells={m['n_cells']} tumor={m['fpr_tumor']:.3f} {m['runtime_s']}s", flush=True)
         except Exception as e:
             import traceback; print(f"{nm} FAIL {type(e).__name__}: {e}", flush=True); traceback.print_exc()

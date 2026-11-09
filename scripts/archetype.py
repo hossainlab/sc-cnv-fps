@@ -23,7 +23,7 @@ def symbols(A):
 
 
 def build_centroids(paths, min_n=50):
-    """Per-cell-type mean log-normalised profile, pooled over reference datasets."""
+    """Per-cell-type mean log-normalized profile, pooled over reference datasets."""
     univ = None
     for p in paths:
         s = set(symbols(ad.read_h5ad(p, backed="r")))

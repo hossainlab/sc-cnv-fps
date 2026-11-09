@@ -3,7 +3,10 @@
 ## scratch directory with output captured to a log.
 ROOT <- normalizePath(".")
 sets <- sort(list.dirs(file.path(ROOT, "rmat"), recursive = FALSE, full.names = FALSE))
-CAP <- "600"
+## Cap of ~1,200 cells per dataset, as reported in the manuscript Methods. The published
+## Crohn's epithelial run has 591 cells, consistent with an earlier 600-cell cap; see
+## README "Known gaps".
+CAP <- "1200"
 logf <- file.path(ROOT, "copykat_log.txt")
 if (!file.exists(logf)) cat("", file = logf)
 

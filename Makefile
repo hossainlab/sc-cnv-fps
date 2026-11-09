@@ -11,6 +11,7 @@ figures:            ## Fig 1-4 from results/ (no raw data needed)
 	$(PY) scripts/fig4.py
 
 tables:             ## manuscript tables + derived numbers from results/
+	$(PY) scripts/density_shift_test.py
 	$(PY) scripts/make_tables.py
 
 genes:              ## Ensembl coordinates -> gene_positions.csv, loci_*.csv

@@ -84,7 +84,7 @@ for d in ORDER:
     rows.append(" & ".join([
         PRETTY[d], t["assay"].replace("'", "$'$"), f"{t.n_cells:,}", str(t.n_donors),
         str(t.n_cell_types), f1(tir[d]) + mark, f1(two[d]) + mark,
-        f1(T2b.loc[d, "aneuploid_pct"]), f1(T2b.loc[d, "notdefined_pct"]),
+        f1(T2b.loc[d, "aneuploid_pct"]) + mark, f1(T2b.loc[d, "notdefined_pct"]),
         f"{int(ck_n[d]):,}", f1(T2.loc[d, "tumour_pct"])]) + r" \\")
     if d == "TS_Stomach":
         rows.append(r"\midrule")
@@ -115,7 +115,7 @@ pooled_row = " & ".join([r"\textbf{Pooled}", "", f"{D['n_cells']:,}", str(D["n_d
 
 write("table1_panel", r"""\begin{table}[htbp]
 \centering
-\caption{\textbf{Tumour-free panel and false malignant-call rates.} Every call is a false positive by construction. infercnvpy columns give the percentage of cells called malignant by infercnvpy under the two-criterion (Tirosh) rule and the forced two-group split, using the immune reference where one was available ($^{\dagger}$reference-free mode: no immune cells in the Crohn's epithelial dataset). CopyKAT was run on a cell-type-proportional subsample ($n$ shown); the aneuploid percentage uses all submitted cells as the denominator, with \texttt{not.defined} cells counted as not aneuploid. Pooled rates are weighted by dataset size. The pooled donor count is a sum over datasets; Tabula Sapiens donors contribute to several organs and the two Crohn's datasets come from one cohort, so it overstates the number of unique donors. Rates for all rules and both reference modes are in Supplementary Table~S1.}
+\caption{\textbf{Tumor-free panel and false malignant-call rates.} Every call is a false positive by construction. infercnvpy columns give the percentage of cells called malignant by infercnvpy under the two-criterion (Tirosh) rule and the forced two-group split, using the immune reference where one was available ($^{\dagger}$reference-free mode, for both infercnvpy and CopyKAT: no immune cells in the Crohn's epithelial dataset). CopyKAT was run on a cell-type-proportional subsample ($n$ shown); the aneuploid percentage uses all cells in the CopyKAT run as the denominator, with \texttt{not.defined} cells counted as not aneuploid. Pooled rates are weighted by dataset size. The pooled donor count is a sum over datasets; Tabula Sapiens donors contribute to several organs and the two Crohn's datasets come from one cohort, so it overstates the number of unique donors. Rates for all rules and both reference modes are in Supplementary Table~S1.}
 \label{tab:panel}
 \scriptsize
 \setlength{\tabcolsep}{3.2pt}
@@ -123,7 +123,7 @@ write("table1_panel", r"""\begin{table}[htbp]
 \toprule
  & & & & & \multicolumn{2}{c}{infercnvpy (\%)} & \multicolumn{3}{c}{CopyKAT} & ikarus \\
 \cmidrule(lr){6-7}\cmidrule(lr){8-10}\cmidrule(lr){11-11}
-Dataset & Assay & Cells & Donors & Types & Tirosh & Two-group & Aneu.\ (\%) & n.d.\ (\%) & $n$ & Tumour (\%) \\
+Dataset & Assay & Cells & Donors & Types & Tirosh & Two-group & Aneu.\ (\%) & n.d.\ (\%) & $n$ & Tumor (\%) \\
 \midrule
 """ + "\n".join(rows) + "\n\\midrule\n" + pooled_row + r"""
 \bottomrule
@@ -198,7 +198,7 @@ for ds in SPK:
     rows.append(" & ".join(["", r"\quad CopyKAT $n$"] + [str(int(ck.n[b])) for b in [0] + burdens]) + r" \\")
 write("tableS3_callers_burden", r"""\begin{table}[htbp]
 \centering
-\caption{\textbf{Response of ikarus and CopyKAT to imposed karyotype burden.} Percentage of cells called tumour (ikarus) or aneuploid (CopyKAT); burden 0 denotes untouched diploid companion cells. ikarus was applied to all cells (""" + f"{n_dip:,}" + r""" diploid, 120 per burden per tissue); CopyKAT to a subsample (cell counts shown).}
+\caption{\textbf{Response of ikarus and CopyKAT to imposed karyotype burden.} Percentage of cells called tumor (ikarus) or aneuploid (CopyKAT); burden 0 denotes untouched diploid companion cells. ikarus was applied to all cells (""" + f"{n_dip:,}" + r""" diploid, 120 per burden per tissue); CopyKAT to a subsample (cell counts shown).}
 \label{tab:s3}
 \scriptsize
 \begin{tabular}{@{}ll""" + "r" * (len(burdens) + 1) + r"""@{}}

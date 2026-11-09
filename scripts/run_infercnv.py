@@ -2,8 +2,8 @@
 
 Two reference modes are exercised because both are used in practice:
   reffree  - no normal reference supplied; the baseline is the mean of all cells
-             (what a practitioner gets when the tissue is assumed to contain tumour)
-  refimm   - immune cells supplied as the normal reference (standard in tumour studies)
+             (what a practitioner gets when the tissue is assumed to contain tumor)
+  refimm   - immune cells supplied as the normal reference (standard in tumor studies)
 
 Three malignancy decision rules are applied to the same score, because the tools
 publish a score but leave the cut to the user:
@@ -101,7 +101,7 @@ def rule_cluster_gmm(score, clusters, seed=0):
 def rule_twogroup(M, score, seed=0):
     """Forced two-group split: Ward linkage on the CNV profile cut into two groups,
     the higher-mean-score group called malignant. This is the shape of the decision
-    CopyKAT and similar tools make, and it cannot return 'no tumour present'."""
+    CopyKAT and similar tools make, and it cannot return 'no tumor present'."""
     from sklearn.decomposition import PCA
     from scipy.cluster.hierarchy import linkage, fcluster
     M = M.toarray() if sp.issparse(M) else np.asarray(M)

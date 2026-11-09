@@ -8,7 +8,7 @@ regenerating the figures does not have to guess.
 |---|---|---|
 | `T0_datasets.csv` | panel composition (cells, donor--dataset counts, cell types, assay, disease) | Table 1, Table S6 |
 | `T1_infercnv_fpr.csv` | infercnvpy false-call rate per dataset x reference mode x decision rule | Table 1, Table S1, Fig. 1a, 1b |
-| `T2_ikarus_fpr.csv` | ikarus tumour-call rate per dataset | Table 1, Fig. 1a |
+| `T2_ikarus_fpr.csv` | ikarus tumor-call rate per dataset | Table 1, Fig. 1a |
 | `T2b_copykat_fpr.csv` | CopyKAT aneuploid and `not.defined` rate per dataset | Table 1, Fig. 1a |
 | `T3_spike_auc.csv` | spike-in AUC by burden, tissue and reference mode | Table S2, Fig. 2a |
 | `T3b_ikarus_burden.csv` | ikarus call rate by imposed burden | Table S3, Fig. 2b |
@@ -18,7 +18,7 @@ regenerating the figures does not have to guess.
 | `T5c_alpha_sweep.csv` | **leave-one-tissue-out (LOTO) calibration across alpha** | Table 3 (LOTO columns), Table S4, Fig. 4a, 4b, 4c |
 | `T10_condition_matched.csv` | **donor-held-out calibration, cross-tissue vs same-dataset null** | Table 3 (donor-held-out columns), Fig. 4d |
 | `T6_density_vs_bias.csv` | panel-averaged apparent shift and gene count per 10-Mb bin | Fig. 3b |
-| `T6b_density_shift_test.csv` | circular-shift test of the gene-density association | Results, Methods, Fig. 3b |
+| `T6b_density_shift_test.csv` | circular-shift test of the gene-density association (regenerated exactly by `scripts/density_shift_test.py`) | Results, Methods, Fig. 3b |
 | `T7_binned_profiles.csv` | per-dataset bin-level difference profiles | Fig. 3a, 3c; input to T8, T9b |
 | `T8_cross_tissue_corr.csv` | pairwise Spearman correlation of difference profiles | Table S5, Fig. 3c |
 | `T9_family_enrichment.csv` | clustered gene-family locus annotation (**annotation only, not a test**) | input to T9b |
@@ -47,12 +47,12 @@ is disclosed in the manuscript itself, and both are reported as computed. For 7 
 datasets the two analyses do not score the same cells at all, because `T10` is restricted
 to donors contributing at least 200 cells.
 
-## `headline_numbers.json` is stale; do not quote it
+## Removed before posting: `headline_numbers.json`
 
-No script writes this file, and it predates the final tables. Its `matched` block disagrees
+No script wrote this file, nothing read it, and it predated the final tables. Its `matched` block disagreed
 with `T4_matched_fpr.csv` (for example, two-criterion false-call rates [5.4, 5.8, 5.1] against
-[6.45, 5.32, 4.45] in `T4`), and its `twogroup_range` [4.5, 78.0] is the reference-free range,
+[6.45, 5.32, 4.45] in `T4`), and its `twogroup_range` [4.5, 78.0] was the reference-free range,
 not the immune-reference range of 4.3–56.2 quoted in the manuscript. Every manuscript number
 comes from the `T*.csv` tables and `derived_numbers.json`, which `scripts/make_tables.py`
-regenerates byte-identically (checked 2026-11-01).
+regenerates byte-identically (checked 2026-11-01). It was removed on 2026-11-07.
 

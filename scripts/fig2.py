@@ -46,7 +46,7 @@ ax.plot([], [], "-o", ms=3.2, lw=1.3, color=META_GREY, label="ikarus")
 ax.plot([], [], "--s", ms=3.0, lw=1.0, color=META_GREY, label="CopyKAT")
 ax.legend(frameon=False, loc="center right", bbox_to_anchor=(1.0, .52), handlelength=1.6,
           labelspacing=.25, borderpad=0, handletextpad=.5)
-ax.text(19.3, 30, "colours: same three tissues as (a)", fontsize=6, color=META_GREY,
+ax.text(19.3, 30, "colors: same three tissues as (a)", fontsize=6, color=META_GREY,
         ha="right", va="center")
 
 # ---- (c) at matched false-positive rate the raw score beats the rule, per tissue

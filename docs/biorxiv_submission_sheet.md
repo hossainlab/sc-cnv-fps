@@ -27,7 +27,7 @@ Evaluating the false-positive rate of single-cell copy-number and malignant-cell
 
 Single-cell cancer studies split cells into malignant and non-malignant compartments using
 copy-number inference or supervised classifiers, but these methods are rarely run on tissue
-containing no tumour. We assembled 14 tumour-free scRNA-seq datasets (36,528 cells from 76
+containing no tumor. We assembled 14 tumor-free scRNA-seq datasets (36,528 cells from 76
 donor–dataset combinations; 10 healthy organs and 4 inflammatory-disease datasets) and ran
 inferCNV (as infercnvpy), CopyKAT and ikarus under published decision rules; every positive
 call is false by construction. infercnvpy and CopyKAT made false calls in every dataset and
@@ -91,9 +91,9 @@ correct anything that is not true of your situation:
   elsewhere.
 - **The objection to expect.** The calibrated rule's specificity is demonstrated (about
   90-fold fewer false calls) but its sensitivity was never measured, so the proposed procedure
-  is not yet shown to retain power. On tumour-free data a rule that calls almost nothing wins
+  is not yet shown to retain power. On tumor-free data a rule that calls almost nothing wins
   trivially. This is stated in the abstract, Results and Limitations; it is a scope decision,
   not a formatting one, and a journal would likely require it to be closed.
 - The second objection to expect is that no allele-aware caller (Numbat, HoneyBADGER, CaSpER)
   was run, even though the paper predicts such methods should resist the compositional
-  artefact it describes. Also disclosed.
+  artifact it describes. Also disclosed.

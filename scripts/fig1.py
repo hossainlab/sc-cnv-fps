@@ -1,4 +1,4 @@
-"""Figure 1 — malignant-cell callers assign tumour labels to tumour-free tissue."""
+"""Figure 1 — malignant-cell callers assign tumor labels to tumor-free tissue."""
 import numpy as np, pandas as pd, matplotlib as mpl, matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
@@ -51,7 +51,7 @@ ax.axhline(0, color=META_GREY, lw=.6)
 ax.set_ylim(-4, 104); ax.margins(x=0.02)
 n_heal = sum(1 for d in order if grp[d] == "healthy")
 ax.axvspan(n_heal - .5, len(order) - .5, color=C_INFLAMED, alpha=.07, zorder=0, lw=0)
-ax.text(len(order) - .6, 96, "inflamed, tumour-free", color=C_INFLAMED, fontsize=6, va="top", ha="right")
+ax.text(len(order) - .6, 96, "inflamed, tumor-free", color=C_INFLAMED, fontsize=6, va="top", ha="right")
 ax.text(-.15, 96, "healthy", color=C_HEALTHY, fontsize=6, va="top", ha="left")
 ax.legend(frameon=False, loc="upper left", bbox_to_anchor=(0.0, 0.88), handletextpad=.4, ncol=3, columnspacing=1.2)
 panel_letter(ax, "a")

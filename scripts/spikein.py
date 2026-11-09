@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 
-# acrocentric short arms carry no protein-coding genes worth modelling
+# acrocentric short arms carry no protein-coding genes worth modeling
 EXCLUDE_ARMS = {("13", "p"), ("14", "p"), ("15", "p"), ("21", "p"), ("22", "p")}
 AUTOSOMES = [str(i) for i in range(1, 23)]
 

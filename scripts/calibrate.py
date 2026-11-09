@@ -37,7 +37,7 @@ def fit_depth_model(ref, score_col="score", depth_col="log_depth", type_col="cel
 
 def apply_depth_model(df, models, score_col="score", depth_col="log_depth",
                       type_col="cell_type"):
-    """Residualise score on depth using the cell-type model (pooled fallback)."""
+    """Residualize score on depth using the cell-type model (pooled fallback)."""
     out = np.empty(len(df))
     tv = df[type_col].astype(str).values
     dv = df[depth_col].values
@@ -146,7 +146,7 @@ def calibrated_calls(query, null, q=0.05, score_col="score", type_col="cell_type
 
 # ---------------------------------------------------------------- label-free archetypes
 def reference_centroids(ref_X, ref_types, genes, min_n=50):
-    """Mean log-normalised profile per reference cell type."""
+    """Mean log-normalized profile per reference cell type."""
     df = pd.DataFrame(ref_X, columns=genes)
     df["_t"] = np.asarray(ref_types).astype(str)
     keep = df["_t"].value_counts()

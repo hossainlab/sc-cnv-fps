@@ -5,7 +5,7 @@ Code, result tables and figures for the preprint
 classifiers.*
 
 Three malignant-cell callers (inferCNV via infercnvpy, CopyKAT, ikarus) are run on
-14 tumour-free scRNA-seq datasets from CELLxGENE (36,528 cells; 76 donor--dataset
+14 tumor-free scRNA-seq datasets from CELLxGENE (36,528 cells; 76 donor--dataset
 combinations, fewer unique donors, since Tabula Sapiens donors contribute to several
 organs and the two Crohn's datasets come from one cohort), so every malignant call is a
 false positive by construction. In-silico arm-level spike-ins supply positive controls,
@@ -20,7 +20,7 @@ config/          panel_def.json — the 14 panel datasets (CELLxGENE URLs, assay
 metadata/        dataset discovery and citation metadata (CELLxGENE manifests, refs)
 scripts/         Python pipeline, analysis modules and figure scripts
 R/               CopyKAT runner and R package installers
-results/         result tables T0–T10, headline_numbers.json, panel_summary.json
+results/         result tables T0–T10, derived_numbers.json, panel_summary.json
                  (see results/README.md for which table backs which figure or table,
                   and for the two superseded calibration tables)
 calls/           per-cell caller output (only TS_Lung inferCNV is shipped)
@@ -78,11 +78,20 @@ Library modules (imported, not run directly): `prep.py`, `dl.py`, `loci.py`,
 
 The original supplement does not contain everything needed to rerun end to end:
 
-- **Table aggregation (step 7).** No script writes `results/T*.csv` or
-  `headline_numbers.json` from `calls/`; the modules `calibrate.py`, `attribution.py`
+- **Table aggregation (step 7).** No script writes `results/T*.csv` from `calls/` (except
+  `T6b`, which `scripts/density_shift_test.py` regenerates exactly from `T6`); the modules `calibrate.py`, `attribution.py`
   and `archetype.py` provide the functions but not the driver. Two consequences are
   recorded in `results/README.md`: the superseded calibration tables `T5`/`T5b` cannot be
   regenerated or reconciled, and neither can the disagreement between `T5c` and `T10`.
+- **Spike-in scoring and calibration drivers.** The code that scored the spike-in cells
+  and computed the matched comparison (`T3`, `T4`), and the drivers that ran the
+  leave-one-tissue-out and donor-held-out calibration (`T5c`, `T10`), were not retained.
+- **CopyKAT subsample sizes.** The `n` column of `T2b` (1,126–1,210 cells, 591 for the
+  Crohn's epithelial dataset) cannot be reproduced from `R/run_copykat.R`: under its
+  proportional rule some datasets would receive fewer cells than `T2b` reports (spleen
+  1,195 against 1,210). The Crohn's epithelial run is consistent with a 600-cell cap and
+  the others with a 1,200-cell cap; `R/run_copykat_all.R` now uses 1,200. Whether `n` counts
+  the cells submitted or the cells CopyKAT returned was not recorded.
 - **Per-cell spike-in scores.** Not retained, so the sensitivity of the calibrated rule
   cannot be evaluated without re-running the spike-in arm of the pipeline (steps 2, 3
   and 6). This is the main open analysis; the manuscript discloses it.
