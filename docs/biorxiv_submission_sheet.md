@@ -21,6 +21,12 @@ be converted to PDF before submission; the `.tex` source travels in the suppleme
 
 ## Metadata fields
 
+The form rejects non-ASCII characters ("The character X in the Abstract field is nonstandard").
+Every field below is plain ASCII: en dashes in ranges are written as hyphens, Greek letters are
+spelled out (rho, alpha) and exponents as `10^-4`. Do not copy text out of the typeset PDF into
+a form field — the PDF carries en and em dashes. In particular, affiliation 1 typesets as
+"Learning—Bangladesh"; type it as "Learning-Bangladesh".
+
 **Title**
 Evaluating the false-positive rate of single-cell copy-number and malignant-cell classifiers
 
@@ -29,21 +35,21 @@ Evaluating the false-positive rate of single-cell copy-number and malignant-cell
 Single-cell cancer studies split cells into malignant and non-malignant compartments using
 copy-number inference or supervised classifiers, but these methods are rarely run on tissue
 containing no tumor. We assembled 14 tumor-free scRNA-seq datasets (36,528 cells from 76
-donor–dataset combinations; 10 healthy organs and 4 inflammatory-disease datasets) and ran
+donor-dataset combinations; 10 healthy organs and 4 inflammatory-disease datasets) and ran
 inferCNV (as infercnvpy), CopyKAT and ikarus under published decision rules; every positive
 call is false by construction. infercnvpy and CopyKAT made false calls in every dataset and
-ikarus in 12 of 14: 0.5–19.3% for a two-criterion rule adapted from Tirosh and colleagues, 4.3–56.2%
-for a forced two-group split with an immune reference and up to 78.0% without one, 3.0–63.0%
-for CopyKAT and 0–100% for ikarus, with CopyKAT and ikarus each calling about 31% of cells
+ikarus in 12 of 14: 0.5-19.3% for a two-criterion rule adapted from Tirosh and colleagues, 4.3-56.2%
+for a forced two-group split with an immune reference and up to 78.0% without one, 3.0-63.0%
+for CopyKAT and 0-100% for ikarus, with CopyKAT and ikarus each calling about 31% of cells
 pooled. In-silico positive controls showed per-cell discrimination near chance for single arm
 events (AUC 0.53), rising to 0.85 at 18 events. At a false-call rate matched on the same
 diploid cells used to measure it, so that the factor is an upper bound, the continuous score
-detected 2.2–5.3 times as many altered cells as the published rules in all eight estimable
+detected 2.2-5.3 times as many altered cells as the published rules in all eight estimable
 rule comparisons, and up to 10.3 times as many as an external classifier. False calls share a
 pseudo-karyotype that recurs across tissues (median Spearman
 rho = 0.54) and tracks local gene density (rho = -0.53, P < 10^-4 against a within-chromosome
 circular-shift null): gene-dense regions look deleted. A cell-type-conditional empirical null
-with Benjamini–Hochberg control at alpha = 5% cut the per-cell false-call rate to a median of
+with Benjamini-Hochberg control at alpha = 5% cut the per-cell false-call rate to a median of
 0.03% in 13 of 14 datasets (28 false calls among 33,536 cells), although 7 of these 13 still
 received at least one call, so extreme-tail control was not exact, and sensitivity was not
 evaluated. In psoriatic skin from a separate study, a null from other tissues failed (26.8%);
