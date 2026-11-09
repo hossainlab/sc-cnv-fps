@@ -11,8 +11,9 @@ the manuscript on 2026-11-01.
 | Manuscript | `preprint/scCNV-FP-Evaluation.pdf` | Single PDF: text, 4 figures, 3 tables and Supplementary Tables S1–S6; 24 pages. Well within the 40 MB limit. |
 | Supplemental material | `scCNV-FP-Evaluation_supplement.zip` | Result tables, analysis and figure scripts, figure files, LaTeX source. Built by `make supplement`. |
 
-Line numbers are enabled in the current source to aid review (`\linenumbers`, flagged with a
-comment in the preamble). Remove that line for final typesetting if you prefer a clean page.
+Line numbers are disabled for posting. The `lineno` package and the `\linenumbers` block are
+commented out in the preamble rather than deleted, so they can be switched back on in one edit
+if a journal asks for a line-numbered manuscript.
 
 The DOCX route is an alternative, not an addition: upload either the PDF, or a Word file plus
 separate figure files for server-side conversion. Do not upload both. bioRxiv requires TeX to
