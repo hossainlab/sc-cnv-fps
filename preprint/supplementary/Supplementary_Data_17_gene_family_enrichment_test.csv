@@ -1,0 +1,2 @@
+test,n_bins_total,n_bins_in_family,n_families_with_bins,obs_mean_abs_diff_family_minus_other,background_mean_abs_diff,null_mean,null_sd,n_shifts,p_circular_shift,seed
+clustered_gene_family_locus_enrichment,278,85,156,-0.001087,0.007639,0.000499,0.00077,2000,0.9815,0
